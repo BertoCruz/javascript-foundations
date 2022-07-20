@@ -21,14 +21,14 @@ Run the command `npm test mythical-creatures/test/unicorn-test.js`. To run other
 - [X] `vampire`
 - [X] `hobbit`
 - [X] `pirate`
-- [ ] `magician`
-- [ ] `medusa`
-- [ ] `werewolf`
-- [ ] `centaur`
-- [ ] `direwolf`
-- [ ] `fairy`
-- [ ] `ogre`
-- [ ] `sphinx`
+- [X] `magician`
+- [] `medusa`
+- [] `werewolf`
+- [] `centaur`
+- [] `direwolf`
+- [] `fairy`
+- [] `ogre`
+- [] `sphinx`
 
 ### Extra Challenge: Make a New Creature!
 
