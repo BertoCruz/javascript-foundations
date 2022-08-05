@@ -102,8 +102,8 @@ describe('Centaur', function() {
 
     assert.equal(centaur.sleep(), 'NO!');
   });
-
-  it.skip('after laying down it is not standing', function() {
+  //I BELIEVE THESE FOLLOWING FEW TEST ARE TO TEACH US ABOUT STRENGTHENING TRUTHY/FALSEY STATEMENTS
+  it('after laying down it is not standing', function() {
     var centaur = new Centaur({ name: 'Georgiana', type: 'Palomino' });
 
     assert.equal(centaur.standing, true);
@@ -120,7 +120,10 @@ describe('Centaur', function() {
     assert.equal(centaur.layingDown, false);
   });
 
-  it.skip('should not run or shoot while laying down', function() {
+  //I ALSO BELIEVE THAT THESE FOLLOWING TESTS ALSO TEACH US ABOUT HANDLING OUR CODE PLACEMENTS.
+  //THIS NEXT ONE, FOR EXAMPLE, REQUIRES THAT WE PLACE AN IF STATEMENT BEFORE THE THE COUNTER EVEN TAKES PLACE
+  //BECAUSE THERE'S NO NEED TO INCREASE THE COUNTER IF THE CENTAUR ISN'T EVEN STANDING.
+  it('should not run or shoot while laying down', function() {
     var centaur = new Centaur({ name: 'Georgiana', type: 'Palomino' });
 
     centaur.layDown();
@@ -129,7 +132,7 @@ describe('Centaur', function() {
     assert.equal(centaur.run(), 'NO!');
   });
 
-  it.skip('should be able to sleep when laying down', function() {
+  it('should be able to sleep when laying down', function() {
     var centaur = new Centaur({ name: 'Georgiana', type: 'Palomino' });
 
     centaur.layDown();
@@ -137,7 +140,7 @@ describe('Centaur', function() {
     assert.equal(centaur.sleep(), 'ZZZZ');
   });
 
-  it.skip('should not be cranky after sleeping', function() {
+  it('should not be cranky after sleeping', function() {
     var centaur = new Centaur({ name: 'Georgiana', type: 'Palomino' });
 
     centaur.run();
@@ -156,7 +159,7 @@ describe('Centaur', function() {
     assert.equal(centaur.shootBow(),'Twang!!!');
   });
 
-  it.skip('should not be cranky after drinking potion', function() {
+  it('should not be cranky after drinking potion', function() {
     var centaur = new Centaur({ name: 'Georgiana', type: 'Palomino' });
 
     centaur.shootBow();
@@ -168,7 +171,7 @@ describe('Centaur', function() {
     assert.equal(centaur.cranky, false)
   });
 
-  it.skip('should only drink potion while standing', function() {
+  it('should only drink potion while standing', function() {
     var centaur = new Centaur({ name: 'Georgiana', type: 'Palomino' });
 
     centaur.layDown();

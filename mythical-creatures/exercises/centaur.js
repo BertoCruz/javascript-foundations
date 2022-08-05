@@ -4,10 +4,15 @@ class Centaur {
         this.breed = being.type;
         this.cranky = false; 
         this.standing = true;
+        this.layingDown = false;
         this.counter = 0;
     }
 
     shootBow() {
+        if (this.layingDown) {
+            return `NO!`;
+        }
+
         this.counter += 1;
 
         if (this.counter >= 3) {
@@ -19,6 +24,10 @@ class Centaur {
     }
 
     run() {
+        if (this.layingDown) {
+            return `NO!`;
+        }
+
         this.counter += 1;
 
         if (this.counter >= 3) {
@@ -30,7 +39,28 @@ class Centaur {
     }
 
     sleep() {
+        if(this.standing) return `NO!`;
+        else if (this.layingDown) {
+            this.cranky = false;
+            this.counter = 0;
+            return `ZZZZ`;
+        }
+    }
 
+    layDown() {
+        this.standing = false;
+        this.layingDown = true;
+    }
+
+    standUp() {
+        this.standing = true;
+        this.layingDown = false;
+    }
+
+    drinkPotion() {
+        if (this.layingDown) return `Not while I'm laying down!`;
+        this.counter = 0;
+        this.cranky = false;
     }
 }
 
